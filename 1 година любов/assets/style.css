@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* LOCK */
+#lock {
+  position: fixed;
+  inset: 0;
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  transition: opacity 1s ease;
+  z-index: 10;
+}
+
+#lock input {
+  padding: 12px;
+  width: 220px;
+  background: #1e1e1e;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+
+#lock button {
+  padding: 10px 24px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+#error {
+  color: #ff6b6b;
+  font-size: 14px;
+  display: none;
+}
+
+/* CONTENT */
+#content {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+/* TIMELINE */
+.month {
+  max-width: 800px;
+}
+
+.month p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  justify-items: center; 
+  align-items: center;
+}
+
+.photos img {
+  width: 100%;
+  border-radius: 10px;
+   height: auto;
+   display: block;
+}
+.month .photos {
+  max-width: 1000px;
+  margin: 0 auto; /* центриране на целия grid */
+}
+
+/* LETTER */
+.letter {
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* FINAL */
+.final img {
+  width: 220px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/*mobile*/
+/* Всички изображения да се скалират, без да се изкривяват */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* центриране */
+}
+
+/* Контейнерите за снимки */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  justify-items: center; /* центрира снимките в клетките */
+}
+
+/* Текстът винаги центриран */
+section {
+  text-align: center;
+  padding: 60px 15px;
+}
+
+.hero h1 {
+  font-size: 8vw; /* гъвкаво спрямо ширината на екрана */
+}
+
+.hero p {
+  font-size: 4vw;
+}
+
+.letter, .final h2 {
+  font-size: 4vw; 
+  max-width: 90%; /* не излиза от екрана */
+  margin: 0 auto;
+}
+
+#lock input {
+  width: 70vw; /* автоматично се напасва на ширината на телефона */
+}
+
+#lock button {
+  width: 50vw;
+}
